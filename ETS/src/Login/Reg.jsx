@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 const Reg = () => {
   return (
     <div  className='card mx-auto mt-5 shadow-lg border-0 rounded-4 p-4 ' style={{width:'30rem'}}>
-        <div className='card-header bg-white bordder-0 '>
+        <div className='card-header bg-dark text-white border-0 '>
             <h1>Sign up</h1>
             <p>Create your account for free</p>
+        </div>
+        <div className='card-body'>
         <form className='bg-light'>
             <div className='mb-3 text-start'>
                 <label className='form-label'>Name</label>
@@ -28,7 +30,8 @@ const Reg = () => {
         <div>
             <p>Already have an account? <Link to='/Login' className='text-decoration-none'>Sign in</Link></p>
         </div>
-    </div>
+        </div>
+    
     </div>
 
   )
