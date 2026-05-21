@@ -1,12 +1,13 @@
 import React from 'react'
-import { useState } from 'react'   
+import { useState } from 'react'  
+import { Link } from 'react-router-dom' 
 
 const Login = () => {
       const [showPassword, setShowPassword] = useState(false)
 
   return <div className='card mx-auto mt-5 shadow-lg border-0 rounded-4 p-4 ' style={{width:'30rem'}}>
-    <div className='card-header bg-white text-dark text-center border-0 '>
-    <h1 className='card-title fw-bold'>Sign in</h1>
+    <div className='card-header bg-dark text-white text-center border-0 '>
+    <h1 className='card-title '>Sign in</h1>
     <p>Enter your mobile number and password to get started</p>
     </div>
     <div className='card-body '>
@@ -43,7 +44,7 @@ const Login = () => {
 
         <br/>
         <div className='mb-3 text-end '>
-        <a href='#forgot-password' className='text-end mt-1 text-decoration-none text-dark'>Forgot Password?</a>
+        <Link to='#forgot-password' className='text-end mt-1 text-decoration-none text-dark'>Forgot Password?</Link>
         </div>
         </div>
         <div className='mb-3 form-check text-start'>
@@ -56,7 +57,8 @@ const Login = () => {
             <button type='submit' className='btn btn-primary w-100 bg-white text-dark '>Continue</button>
         </div>
         <div >
-            <a href='#' className='text-decoration-none text-dark'>Need help?</a>
+            <Link to='#' className='text-decoration-none text-dark'>Need help?</Link>
+            <p>new user? <Link to="/register" className='text-decoration-none'>Sign up</Link></p>
         </div>
     </form>
     </div>
